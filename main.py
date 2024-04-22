@@ -23,7 +23,7 @@ def run():
         await bot.process_commands(message)  
 
     @bot.command(name="ec")
-    async def ecCalc(ctx, num : int):
+    async def ecCalc(ctx, num : float):
         result = num * 6.3
         await ctx.send(f"{num} Empire Coins er ish {result} norske kroner ;-)")
 
