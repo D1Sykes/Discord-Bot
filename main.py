@@ -2,10 +2,12 @@
 
 import settings
 import discord
+import random
 
 from discord.ext import commands
 
-badwords = ['cs', 'cs2'] # Custom variable used in later function(s)
+badwords = ['cs', 'cs2','counter strike'] # Custom variable used in later function(s)
+badwords_responses = ['Nei.', 'Hvilken del av nei forstår du ikke?', 'Ikke faen', 'Uaktelt.', 'Legg deg.']
 
 def run(): # Main program
 
@@ -27,7 +29,8 @@ def run(): # Main program
             return
         for i in badwords:
             if i in message.content.lower():
-                await message.channel.send('Nei.')
+                random_response = random.choice(badwords_responses)
+                await message.channel.send(random_response)
         await bot.process_commands(message)  # This line allows the bot to do other things while the event is going, again keeping it from being stuck in a loop. Also, I don't know why.
 
 
