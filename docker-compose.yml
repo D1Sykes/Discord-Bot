@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  secretary:
+    image: ghcr.io/D1Sykes/Discord-Bot:main
+    environment:
+      - DISCORD_TOKEN=your_token_here
