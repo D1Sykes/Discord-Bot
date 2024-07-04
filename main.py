@@ -7,7 +7,7 @@ import random
 from discord.ext import commands
 
 badwords = ['cs', 'cs2','counter strike'] # Custom variable used in later function(s)
-badwords_responses = ['Nei.', 'Hvilken del av nei forstår du ikke?', 'Ikke faen', 'Uaktelt.', 'Legg deg.']
+badwords_responses = ['Nei.', 'Hvilken del av nei forstår du ikke?', 'Ikke faen', 'Uaktuelt.', 'Legg deg.']
 
 def run(): # Main program
 
