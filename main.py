@@ -29,9 +29,10 @@ def run(): # Main program
             return
         for i in badwords:
             if i in message.content.lower():
-                random_response = random.choice(badwords_responses)
-                await message.channel.send(random_response)
-        await bot.process_commands(message)  # This line allows the bot to do other things while the event is going, again keeping it from being stuck in a loop. Also, I don't know why.
+                random_response = random.sample(badwords_responses, k=5)
+                for response in random_response:
+                    await message.channel.send(response)
+            await bot.process_commands(message)  # This line allows the bot to do other things while the event is going, again keeping it from being stuck in a loop. Also, I don't know why.
 
 
     # Simple multiplication calc for CSGOEmpire coins to Norwegian Kroner conversion
