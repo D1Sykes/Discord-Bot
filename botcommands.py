@@ -25,11 +25,16 @@ async def on_message(message):
 
 # Simple currency-converter between CSGO Empire Coins and Norwegian Kroner
 async def ecCalc(ctx, num: float = None):
-    if num is None:
-        await ctx.send("Du må bruke et tall og da dumbass, typ: !ec 10")
-    else:
+    try:
+        # Check if num is provided and try to convert it to a float
+        if num is None:
+            raise ValueError("Ingen argumenter gitt")
+        num = float(num)  # Attempt to convert to float
         result = num * 6.3
         await ctx.send(f"{num} Empire Coins er ish {result} norske kroner ;-)")
+    except ValueError:
+        # If conversion to float fails or if no argument is provided
+        await ctx.send("Du må bruke et TALL, ikke ingenting, ikke et *ord*, et **TALL**, typ !ec 10")
 
 
 # Simple random seed generator,
