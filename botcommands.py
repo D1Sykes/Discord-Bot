@@ -36,7 +36,6 @@ async def ecCalc(ctx, num: float = None):
         # If conversion to float fails or if no argument is provided
         await ctx.send("Du må bruke et TALL, ikke ingenting, ikke et *ord*, et **TALL**, typ !ec 10")
 
-
 # Simple random seed generator,
 async def seedGen(ctx):
     randSeed = random.randint(10000000000000000000000000000000, 99999999999999999999999999999999)

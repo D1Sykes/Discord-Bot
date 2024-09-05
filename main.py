@@ -9,7 +9,7 @@ def run(): # Main program
     intents = discord.Intents.all()
     bot = commands.Bot(command_prefix='!', intents=intents)
 
-    # Set up the bot with the commands and events from bot_commands.py
+    # Set up the bot with the commands and events from botcommands.py
     botSetup(bot)
 
     bot.run(settings.token)
